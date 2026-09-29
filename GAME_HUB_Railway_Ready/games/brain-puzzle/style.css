@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+    min-height: 100vh;
+}
+
+.top-bar {
+    height: 70px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #101010;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: #ff1744;
+}
+
+.top-bar a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar a:hover {
+    color: #ff1744;
+}
+
+.game-page {
+    width: min(900px, 92%);
+    margin: auto;
+    padding: 50px 0;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-header > p {
+    color: #ff1744;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.game-header h1 {
+    font-size: clamp(30px, 6vw, 50px);
+    margin: 10px 0 25px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stats div {
+    min-width: 130px;
+    padding: 14px 25px;
+
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+}
+
+.stats span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.stats strong {
+    font-size: 27px;
+}
+
+.puzzle-area {
+    position: relative;
+
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at center, #1b1b1b, #090909);
+
+    border: 2px solid #292929;
+    border-radius: 15px;
+}
+
+.question-box {
+    width: min(90%, 600px);
+    text-align: center;
+}
+
+.question-label {
+    color: #ff1744;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.question-box h2 {
+    font-size: clamp(40px, 8vw, 70px);
+    margin-bottom: 35px;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.answer-button {
+    padding: 18px;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    background: #151515;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-button:hover {
+    border-color: #ff1744;
+    background: #202020;
+    transform: translateY(-2px);
+}
+
+.message {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(90%, 430px);
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: rgba(10, 10, 10, 0.97);
+
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    z-index: 10;
+}
+
+.message h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.message p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.message button {
+    border: none;
+    padding: 14px 28px;
+
+    border-radius: 6px;
+
+    background: #ff1744;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.message button:hover {
+    background: #d50032;
+}
+
+.instructions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.instructions h2 {
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #888;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 0 4%;
+    }
+
+    .top-bar a {
+        font-size: 11px;
+    }
+
+    .game-page {
+        padding-top: 30px;
+    }
+
+    .puzzle-area {
+        min-height: 500px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .stats div {
+        min-width: 105px;
+    }
+}
+
+/* GAME HUB MOBILE */
+html { -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; overflow-x: hidden; }
+button, a { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 600px) {
+    .top-bar { padding-left: 14px !important; padding-right: 14px !important; }
+    .top-bar a { font-size: 12px; }
+    canvas { max-width: 100%; height: auto; }
+    button { min-height: 44px; }
+}

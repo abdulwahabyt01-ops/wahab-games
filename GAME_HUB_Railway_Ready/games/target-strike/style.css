@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+    min-height: 100vh;
+}
+
+/* TOP BAR */
+
+.top-bar {
+    height: 70px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #101010;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: #ff1744;
+}
+
+.top-bar a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar a:hover {
+    color: #ff1744;
+}
+
+
+/* GAME PAGE */
+
+.game-page {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 50px 0;
+}
+
+
+/* HEADER */
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-header > p {
+    color: #ff1744;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.game-header h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin: 10px 0 30px;
+}
+
+
+/* STATS */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stats div {
+    min-width: 130px;
+    padding: 15px 25px;
+
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+}
+
+.stats span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.stats strong {
+    font-size: 28px;
+}
+
+
+/* GAME AREA */
+
+.game-area {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center, #1b1b1b, #090909);
+
+    border: 2px solid #292929;
+    border-radius: 15px;
+
+    cursor: crosshair;
+}
+
+
+/* START MESSAGE */
+
+.message {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    width: min(90%, 400px);
+
+    padding: 35px;
+
+    background: rgba(15, 15, 15, 0.95);
+
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.message h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.message p {
+    color: #aaa;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.message button {
+    border: none;
+    padding: 14px 30px;
+
+    background: #ff1744;
+    color: white;
+
+    font-weight: bold;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.message button:hover {
+    background: #d50032;
+    transform: translateY(-2px);
+}
+
+
+/* TARGET */
+
+.target {
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            white 0 15%,
+            #ff1744 16% 35%,
+            white 36% 55%,
+            #ff1744 56% 75%,
+            white 76% 100%
+        );
+
+    box-shadow: 0 0 25px rgba(255, 23, 68, 0.6);
+
+    cursor: crosshair;
+
+    animation: targetAppear 0.15s ease-out;
+}
+
+@keyframes targetAppear {
+
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* INSTRUCTIONS */
+
+.instructions {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.instructions h2 {
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #888;
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 0 4%;
+    }
+
+    .top-bar a {
+        font-size: 12px;
+    }
+
+    .game-page {
+        padding-top: 30px;
+    }
+
+    .game-area {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .stats div {
+        min-width: 110px;
+    }
+
+}
+
+/* GAME HUB MOBILE */
+html { -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; overflow-x: hidden; }
+button, a { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 600px) {
+    .top-bar { padding-left: 14px !important; padding-right: 14px !important; }
+    .top-bar a { font-size: 12px; }
+    canvas { max-width: 100%; height: auto; }
+    button { min-height: 44px; }
+}

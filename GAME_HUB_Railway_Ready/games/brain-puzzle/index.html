@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ff1744">
+
+    <title>Brain Puzzle - GAME HUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+
+    <div class="logo">
+        🎮 GAME <span>HUB</span>
+    </div>
+
+    <a href="/">
+        ← BACK TO GAME HUB
+    </a>
+
+</header>
+
+
+<main class="game-page">
+
+    <section class="game-header">
+
+        <p>BRAIN PUZZLE</p>
+
+        <h1>🧩 Challenge Your Brain</h1>
+
+        <div class="stats">
+
+            <div>
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <span>Question</span>
+                <strong id="questionNumber">1</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="puzzle-area">
+
+        <div id="startScreen" class="message">
+
+            <h2>Ready?</h2>
+
+            <p>
+                Solve the math puzzles as quickly as you can.
+            </p>
+
+            <button id="startButton">
+                START PUZZLE
+            </button>
+
+        </div>
+
+
+        <div id="questionBox" class="question-box">
+
+            <p class="question-label">
+                SOLVE THIS
+            </p>
+
+            <h2 id="question">
+                5 + 5 = ?
+            </h2>
+
+            <div id="answers" class="answers"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="instructions">
+
+        <h2>How to Play</h2>
+
+        <p>
+            Choose the correct answer. Every correct answer
+            increases your score and makes the puzzles harder.
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

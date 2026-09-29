@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ff1744">
+
+    <title>Brick Breaker - GAME HUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+
+    <div class="logo">
+        🎮 GAME <span>HUB</span>
+    </div>
+
+    <a href="/">
+        ← BACK TO GAME HUB
+    </a>
+
+</header>
+
+
+<main class="game-page">
+
+    <section class="game-header">
+
+        <p>BRICK BREAKER</p>
+
+        <h1>🧱 Break All The Bricks!</h1>
+
+        <div class="stats">
+
+            <div>
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <span>Lives</span>
+                <strong id="lives">3</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="game-area">
+
+        <div id="startScreen" class="message">
+
+            <h2>Ready to Break?</h2>
+
+            <p>
+                Move the paddle and destroy all the bricks!
+            </p>
+
+            <button id="startButton">
+                START GAME
+            </button>
+
+        </div>
+
+
+        <canvas id="gameCanvas"></canvas>
+
+
+        <div class="mobile-controls">
+
+            <button id="leftButton">
+                ⬅️ LEFT
+            </button>
+
+            <button id="rightButton">
+                RIGHT ➡️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="instructions">
+
+        <h2>How to Play</h2>
+
+        <p>
+            Move the paddle left and right.
+            Keep the ball from falling and break
+            every brick to win!
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

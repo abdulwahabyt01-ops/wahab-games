@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    height: 70px;
+    background: #111;
+
+    border-bottom: 2px solid #ff1744;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff1744;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar a:hover {
+    color: #ff1744;
+}
+
+
+/* GAME PAGE */
+
+.game-page {
+    width: 95%;
+    max-width: 800px;
+
+    margin: 30px auto;
+}
+
+
+/* HEADER */
+
+.game-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-header p {
+    color: #ff1744;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.game-header h1 {
+    margin: 10px 0 20px;
+
+    font-size: 32px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.stats div {
+    background: #151515;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    padding: 10px 30px;
+}
+
+.stats span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+.stats strong {
+    display: block;
+
+    color: #ff1744;
+
+    font-size: 25px;
+
+    margin-top: 4px;
+}
+
+
+/* GAME AREA */
+
+.game-area {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: #050505;
+
+    border: 3px solid #ff1744;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 25px rgba(255, 23, 68, 0.25);
+}
+
+
+/* CANVAS */
+
+#gameCanvas {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    background: #101010;
+}
+
+
+/* START / GAME OVER SCREEN */
+
+.message {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.message h2 {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.message p {
+    color: #ccc;
+
+    margin-bottom: 25px;
+}
+
+.message button {
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 8px;
+
+    background: #ff1744;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.message button:hover {
+    background: #d50032;
+
+    transform: scale(1.05);
+}
+
+
+/* MOBILE CONTROLS */
+
+.mobile-controls {
+    position: absolute;
+
+    bottom: 15px;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.mobile-controls div {
+    display: flex;
+
+    gap: 5px;
+}
+
+.mobile-controls button {
+    width: 55px;
+    height: 50px;
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+}
+
+.mobile-controls button:active {
+    background: #ff1744;
+
+    transform: scale(0.9);
+}
+
+
+/* INSTRUCTIONS */
+
+.instructions {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #111;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.instructions h2 {
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #aaa;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .top-bar a {
+        font-size: 12px;
+    }
+
+    .game-header h1 {
+        font-size: 25px;
+    }
+
+    .stats div {
+        padding: 8px 20px;
+    }
+
+    .game-area {
+        width: 100%;
+    }
+}
+
+/* GAME HUB MOBILE */
+html { -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; overflow-x: hidden; }
+button, a { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 600px) {
+    .top-bar { padding-left: 14px !important; padding-right: 14px !important; }
+    .top-bar a { font-size: 12px; }
+    canvas { max-width: 100%; height: auto; }
+    button { min-height: 44px; }
+}
